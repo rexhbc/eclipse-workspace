@@ -2,6 +2,7 @@ package rpc;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,6 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import entity.Item;
+import external.TicketMasterAPI;
 
 /**
  * Servlet implementation class SearchItem
@@ -32,22 +36,23 @@ public class SearchItem extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("application/json");
-		PrintWriter out = response.getWriter();
-		
 		JSONArray array = new JSONArray();
 		try {
-			JSONObject o1 = new JSONObject();
-			o1.put("name", "abcd");
-			o1.put("address", "san francisco");
-			o1.put("time", "01/01/2017");
-			array.put(o1);
-			array.put(new JSONObject().put("name", "1234").put("address", "san jose").put("time", "01/02/2017"));
-		} catch (JSONException e) {
+			double lat = Double.parseDouble(request.getParameter("lat"));
+			double lon = Double.parseDouble(request.getParameter("lon"));
+			String keyword = request.getParameter("term");
+			
+			TicketMasterAPI tmAPI = new TicketMasterAPI();
+			List<Item> items = tmAPI.search(lat, lon, keyword);
+			
+			for (Item item : items) {
+				JSONObject obj = item.toJSONObject();
+				array.put(obj);
+			}
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		out.print(array);
-		out.close();
+		RpcHelper.writeJsonArray(response, array);
 	}
 
 	/**
