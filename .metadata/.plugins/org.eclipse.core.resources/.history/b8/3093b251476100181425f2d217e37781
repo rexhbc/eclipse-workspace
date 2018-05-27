@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="UTF-8">
+     <meta name="description" content="Item Recommendation">
+     <meta name="author" content="Your Name">
+     <title>Item Recommendation Final</title> 
+   </head>
+   <body>
+     
+     <header>
+       <nav>
+        <a href = "">Home</a>
+        <a href = "#name">Contact</a>
+        <a href = "">About</a>
+      </nav>
+     </header>
+      
+     <div>
+       <header>
+         <p>
+           <span>Item</span>
+           <br/> Reconmmendation
+         </p>
+       </header>
+       
+       <section>
+         <aside>
+           <nav>
+             <a href="#">Nearby</a>
+             <a href="#">My Favorites</a>
+             <a href="#">Recommendation</a>
+           </nav>
+         </aside>
+         
+         <ul>
+           <li>
+             <img src = "https://s1.ticketm.net/dam/c/48b/2352e3b5-8496-496b-97a3-e605177e848b_105851_ARTIST_PAGE_3_2.jpg" />
+             <div>
+               <a href="#">Item</a>
+               <p>Music</p>
+             </div>
+             <p>99 Grove Street<br/>San Francisco</p>
+           </li>
+         </ul>
+       </section>
+ 
+     </div>
+      
+     <footer>
+       <p>What We Do</p>
+       <p>"Help you find the best place around."<p>
+       <ul>
+         <li><p>LaiOffer office, CA</p></li>
+         <li><p>info@laioffer.com</p></li>
+         <li><p>+1 800 123 456</p></li>
+       </ul> 
+     </footer>
+   </body>
+</html>

@@ -4635,3 +4635,99 @@ java.lang.StringIndexOutOfBoundsException: String index out of range: 8709
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+!SESSION 2018-05-24 19:36:54.679 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_172
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/rexhuang/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/rexhuang/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-24 19:37:05.785
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.rse.ui 4 0 2018-05-24 19:37:36.142
+!MESSAGE Error saving new subsystem Local Files
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1090)
+	at org.eclipse.swt.widgets.Display.createDisplay(Display.java:840)
+	at org.eclipse.swt.widgets.Display.create(Display.java:823)
+	at org.eclipse.swt.graphics.Device.<init>(Device.java:129)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:722)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:713)
+	at org.eclipse.swt.widgets.Display.getDefault(Display.java:1420)
+	at org.eclipse.rse.internal.core.model.SystemRegistry.runOnMainThread(SystemRegistry.java:2523)
+	at org.eclipse.rse.internal.core.model.SystemRegistry.fireModelChangeEvent(SystemRegistry.java:2559)
+	at org.eclipse.rse.core.subsystems.SubSystemConfiguration.createSubSystem(SubSystemConfiguration.java:1052)
+	at org.eclipse.rse.internal.core.model.SystemRegistry.createSubSystems(SystemRegistry.java:1667)
+	at org.eclipse.rse.internal.persistence.dom.RSEDOMImporter.restoreSubSystem(RSEDOMImporter.java:341)
+	at org.eclipse.rse.internal.persistence.dom.RSEDOMImporter.restoreConnectorService(RSEDOMImporter.java:220)
+	at org.eclipse.rse.internal.persistence.dom.RSEDOMImporter.restoreHost(RSEDOMImporter.java:188)
+	at org.eclipse.rse.internal.persistence.dom.RSEDOMImporter.restoreProfile(RSEDOMImporter.java:105)
+	at org.eclipse.rse.internal.persistence.RSEPersistenceManager.load(RSEPersistenceManager.java:528)
+	at org.eclipse.rse.internal.persistence.RSEPersistenceManager.loadProfiles(RSEPersistenceManager.java:507)
+	at org.eclipse.rse.internal.persistence.RSEPersistenceManager.restoreProfiles(RSEPersistenceManager.java:365)
+	at org.eclipse.rse.internal.persistence.RSEPersistenceManager.restoreProfiles(RSEPersistenceManager.java:351)
+	at org.eclipse.rse.internal.core.RSEInitJob.run(RSEInitJob.java:206)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.rse.core 4 1 2018-05-24 19:37:36.147
+!MESSAGE Invalid thread access
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1090)
+	at org.eclipse.swt.widgets.Display.createDisplay(Display.java:840)
+	at org.eclipse.swt.widgets.Display.create(Display.java:823)
+	at org.eclipse.swt.graphics.Device.<init>(Device.java:129)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:722)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:713)
+	at org.eclipse.swt.widgets.Display.getDefault(Display.java:1420)
+	at org.eclipse.rse.internal.core.model.SystemRegistry.runOnMainThread(SystemRegistry.java:2523)
+	at org.eclipse.rse.internal.core.model.SystemRegistry.fireModelChangeEvent(SystemRegistry.java:2559)
+	at org.eclipse.rse.internal.core.model.SystemRegistry.createSubSystems(SystemRegistry.java:1672)
+	at org.eclipse.rse.internal.persistence.dom.RSEDOMImporter.restoreSubSystem(RSEDOMImporter.java:341)
+	at org.eclipse.rse.internal.persistence.dom.RSEDOMImporter.restoreConnectorService(RSEDOMImporter.java:220)
+	at org.eclipse.rse.internal.persistence.dom.RSEDOMImporter.restoreHost(RSEDOMImporter.java:188)
+	at org.eclipse.rse.internal.persistence.dom.RSEDOMImporter.restoreProfile(RSEDOMImporter.java:105)
+	at org.eclipse.rse.internal.persistence.RSEPersistenceManager.load(RSEPersistenceManager.java:528)
+	at org.eclipse.rse.internal.persistence.RSEPersistenceManager.loadProfiles(RSEPersistenceManager.java:507)
+	at org.eclipse.rse.internal.persistence.RSEPersistenceManager.restoreProfiles(RSEPersistenceManager.java:365)
+	at org.eclipse.rse.internal.persistence.RSEPersistenceManager.restoreProfiles(RSEPersistenceManager.java:351)
+	at org.eclipse.rse.internal.core.RSEInitJob.run(RSEInitJob.java:206)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-05-24 19:37:36.149
+!MESSAGE An internal error occurred during: "Initialize RSE".
+!STACK 0
+org.eclipse.swt.SWTException: Invalid thread access
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.widgets.Display.error(Display.java:1090)
+	at org.eclipse.swt.widgets.Display.createDisplay(Display.java:840)
+	at org.eclipse.swt.widgets.Display.create(Display.java:823)
+	at org.eclipse.swt.graphics.Device.<init>(Device.java:129)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:722)
+	at org.eclipse.swt.widgets.Display.<init>(Display.java:713)
+	at org.eclipse.swt.widgets.Display.getDefault(Display.java:1420)
+	at org.eclipse.rse.internal.core.model.SystemRegistry.runOnMainThread(SystemRegistry.java:2523)
+	at org.eclipse.rse.internal.core.model.SystemRegistry.fireEvent(SystemRegistry.java:2538)
+	at org.eclipse.rse.internal.core.RSEInitJob.run(RSEInitJob.java:209)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SESSION 2018-05-26 17:43:10.796 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_172
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/rexhuang/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/rexhuang/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-26 17:43:14.507
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
