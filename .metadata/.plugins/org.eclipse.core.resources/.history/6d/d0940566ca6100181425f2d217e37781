@@ -1,0 +1,7 @@
+package db.mysql;
+
+import db.DBConnection;
+
+public class MySQLConnection implements DBConnection{
+
+}
